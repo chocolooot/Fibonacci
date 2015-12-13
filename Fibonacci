@@ -1,0 +1,33 @@
+// Louis Anton D. Saclot
+// CSA-1
+// Nov. 18, 2015
+// This program solves for the Fibonacci series
+
+#include <stdio.h>
+
+int main () {
+	
+	int num1=1, num2=1, digits, cnt, fibonum=0, resnum=1, givnum=1;
+	
+	// Asks input from the user
+	printf("Please Enter 2 positve numbers: ");
+	scanf("%d",&num1);
+	scanf("%d",&num2);
+	
+	digits=num1+num2; // Number of terms
+	
+	printf("The Fibonacci Series is : ");
+	
+	for(cnt=1;cnt<digits;cnt++) {
+	
+	if(cnt>=num1)
+		printf("%d  ", fibonum); // Displays the sequence
+
+		resnum=givnum;
+		givnum=fibonum;
+		fibonum=resnum+givnum; // Formula 
+			
+	}
+	
+	return 0;
+}
